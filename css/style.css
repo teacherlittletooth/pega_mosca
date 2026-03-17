@@ -2,6 +2,7 @@
     --vertical: 50%;
     --horizontal: 50%;
     --velocidade: 2s;
+    --giro: 0deg;
 }
 
 #tabuleiro {
@@ -32,6 +33,8 @@ body {
     transform: translate(-50%, -50%);
     width: 50px;
     transition: var(--velocidade);
+    rotate: var(--giro);
+    display: block;
 }
 
 #numeros {

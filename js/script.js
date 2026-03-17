@@ -32,7 +32,7 @@ timer = setInterval(()=>{
         clearInterval(timer)
         gameOver.style.display = "block"
     }
-}, 100)
+}, 1000)
 
 //Evento de clique na mosca
 mosca.addEventListener("click", ()=>{
@@ -58,12 +58,15 @@ mosca.addEventListener("click", ()=>{
 function moveMosca() {
     let vertical = Math.floor( Math.random() * (max - min + 1) ) + min
     let horizontal = Math.floor( Math.random() * (max - min + 1) ) + min
+    let giro = Math.floor( Math.random() * (180 - (-180) + 1) ) + -180
 
     root.style.setProperty("--vertical", vertical + "%")
     root.style.setProperty("--horizontal", horizontal + "%")
+    root.style.setProperty("--giro", giro + "deg")
 
     console.log("Y = " + vertical)
     console.log("X = " + horizontal)
+    console.log("Giro = " + giro)
     console.log("Velocidade = " + velocidade)
 }
 
